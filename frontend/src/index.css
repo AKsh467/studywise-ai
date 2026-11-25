@@ -1,0 +1,281 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-heading: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+    --font-display: 'Syne', 'Space Grotesk', system-ui, sans-serif;
+    --font-editorial: 'Newsreader', Georgia, serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* PRISMATIC ATELIER COLOR PALETTE */
+    --color-alabaster: #F6F0E6;
+    --color-alabaster-card: #FFFFFF;
+    --color-alabaster-dim: #EFE9DD;
+    
+    --color-ink: #24152F;
+    --color-ink-deep: #180D20;
+    --color-ink-soft: #382448;
+    --color-ink-muted: #6C5A7A;
+    --color-ink-subtle: #9887A4;
+
+    --color-ultramarine: #3548D4;
+    --color-orchid: #A66CFF;
+    --color-tangerine: #FF784F;
+    --color-acid: #D6EF72;
+    --color-mint: #9DE2CB;
+    --color-silver: #D9D5E8;
+
+    --border-editorial: rgba(36, 21, 47, 0.08);
+    --border-prismatic-active: rgba(53, 72, 212, 0.35);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-alabaster);
+    color: var(--color-ink);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.03em;
+    color: var(--color-ink);
+  }
+
+  .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.035em;
+  }
+
+  .font-editorial {
+    font-family: var(--font-editorial);
+  }
+
+  .font-heading {
+    font-family: var(--font-heading);
+  }
+
+  code, pre, .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+/* =========================================================================
+   PRISMATIC ATELIER SURFACES & ARTISTIC TEXTURES
+   ========================================================================= */
+
+/* Paper Grain Texture */
+.atelier-canvas {
+  background-color: #F6F0E6;
+  background-image: 
+    radial-gradient(rgba(36, 21, 47, 0.04) 1px, transparent 0),
+    radial-gradient(rgba(36, 21, 47, 0.04) 1px, #F6F0E6 0);
+  background-size: 24px 24px;
+  background-position: 0 0, 12px 12px;
+}
+
+/* Prismatic Holographic Border Envelope */
+.holographic-frame {
+  position: relative;
+  background: linear-gradient(135deg, rgba(217, 213, 232, 0.8) 0%, rgba(166, 108, 255, 0.5) 28%, rgba(53, 72, 212, 0.45) 55%, rgba(214, 239, 114, 0.5) 80%, rgba(255, 120, 79, 0.45) 100%);
+  padding: 1.5px;
+  border-radius: 1.5rem;
+  box-shadow: 0 16px 40px -12px rgba(36, 21, 47, 0.08), 0 4px 16px -2px rgba(53, 72, 212, 0.06);
+}
+
+.holographic-frame-dark {
+  position: relative;
+  background: linear-gradient(135deg, rgba(166, 108, 255, 0.6) 0%, rgba(53, 72, 212, 0.5) 30%, rgba(214, 239, 114, 0.55) 70%, rgba(255, 120, 79, 0.5) 100%);
+  padding: 1.5px;
+  border-radius: 1.75rem;
+  box-shadow: 0 24px 60px -15px rgba(24, 13, 32, 0.45), 0 8px 24px -4px rgba(53, 72, 212, 0.2);
+}
+
+/* Atelier Editorial Card - Crisp Alabaster White */
+.card-editorial {
+  background: #FFFFFF;
+  border: 1px solid rgba(36, 21, 47, 0.08);
+  box-shadow: 0 4px 24px -2px rgba(36, 21, 47, 0.04), 0 1px 3px rgba(36, 21, 47, 0.02);
+  border-radius: 1.25rem;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-editorial-interactive {
+  background: #FFFFFF;
+  border: 1px solid rgba(36, 21, 47, 0.08);
+  box-shadow: 0 4px 24px -2px rgba(36, 21, 47, 0.04), 0 1px 3px rgba(36, 21, 47, 0.02);
+  border-radius: 1.25rem;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-editorial-interactive:hover {
+  background: #FFFFFF;
+  border-color: rgba(53, 72, 212, 0.35);
+  box-shadow: 0 20px 45px -10px rgba(36, 21, 47, 0.09), 0 6px 18px -3px rgba(53, 72, 212, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Atelier Architectural Monolith - Deep Ink Violet Panel */
+.card-plum-hero,
+.card-ink-monolith {
+  background: linear-gradient(135deg, #24152F 0%, #1A0D23 60%, #14091C 100%);
+  border: 1px solid rgba(217, 213, 232, 0.2);
+  color: #F6F0E6;
+  box-shadow: 0 24px 60px -15px rgba(24, 13, 32, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  border-radius: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-plum-hero h1,
+.card-plum-hero h2,
+.card-plum-hero h3,
+.card-plum-hero h4,
+.card-ink-monolith h1,
+.card-ink-monolith h2,
+.card-ink-monolith h3,
+.card-ink-monolith h4 {
+  color: #FFFFFF;
+}
+
+/* Exhibition Ticket Cutout */
+.card-ticket {
+  background: #FFFFFF;
+  border: 1px dashed rgba(36, 21, 47, 0.18);
+  border-radius: 1.25rem;
+  position: relative;
+}
+
+/* Translucent Opalescent Glass */
+.card-analytical,
+.glass-panel {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(36, 21, 47, 0.08);
+  box-shadow: 0 8px 30px -4px rgba(36, 21, 47, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  border-radius: 1.25rem;
+}
+
+.glass-panel-interactive {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(36, 21, 47, 0.08);
+  box-shadow: 0 8px 30px -4px rgba(36, 21, 47, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  border-radius: 1.25rem;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-interactive:hover {
+  border-color: rgba(53, 72, 212, 0.3);
+  box-shadow: 0 18px 40px -8px rgba(36, 21, 47, 0.08);
+  transform: translateY(-2px);
+}
+
+.card-dimensional {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.96) 0%, rgba(246, 240, 230, 0.9) 100%);
+  border: 1px solid rgba(166, 108, 255, 0.35);
+  box-shadow: 0 12px 32px -6px rgba(53, 72, 212, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  border-radius: 1.25rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* =========================================================================
+   PRISMATIC ATELIER GRADIENTS & TYPOGRAPHY HIGHLIGHTS
+   ========================================================================= */
+
+.gradient-text-prismatic {
+  background: linear-gradient(135deg, #3548D4 0%, #A66CFF 40%, #FF784F 80%, #D6EF72 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-ultramarine {
+  background: linear-gradient(135deg, #24152F 0%, #3548D4 65%, #A66CFF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-orchid {
+  background: linear-gradient(135deg, #A66CFF 0%, #FF784F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-acid {
+  background: linear-gradient(135deg, #D6EF72 0%, #9DE2CB 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-tangerine {
+  background: linear-gradient(135deg, #FF784F 0%, #E8B64B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-vibrant {
+  background: linear-gradient(135deg, #3548D4 0%, #A66CFF 50%, #FF784F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Ambient Prismatic Color Fields */
+.atelier-bloom-ultramarine {
+  position: absolute;
+  width: 580px;
+  height: 580px;
+  background: radial-gradient(circle, rgba(53, 72, 212, 0.16) 0%, rgba(166, 108, 255, 0.08) 45%, rgba(246, 240, 230, 0) 70%);
+  filter: blur(65px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.atelier-bloom-acid {
+  position: absolute;
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(circle, rgba(214, 239, 114, 0.22) 0%, rgba(157, 226, 203, 0.1) 50%, rgba(246, 240, 230, 0) 70%);
+  filter: blur(60px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.atelier-bloom-tangerine {
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  background: radial-gradient(circle, rgba(255, 120, 79, 0.16) 0%, rgba(166, 108, 255, 0.08) 50%, rgba(246, 240, 230, 0) 70%);
+  filter: blur(60px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Halftone Matrix */
+.bg-halftone-pattern {
+  background-size: 28px 28px;
+  background-image: 
+    radial-gradient(circle, rgba(36, 21, 47, 0.06) 1.5px, transparent 1.5px);
+}
+
+/* Custom Architectural Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F6F0E6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D9D2C5;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A66CFF;
+}
